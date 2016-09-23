@@ -127,4 +127,13 @@ function girino_sidebar_init(){
 add_action( 'widgets_init', 'girino_sidebar_init');
 
 
+function girino_get_post_navigation(){
+
+    if( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ):
+
+        require( get_template_directory() . '/inc/templates/girino-comment-nav.php');
+
+    endif;
+}
+
 ?>
