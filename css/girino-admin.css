@@ -1,0 +1,16 @@
+/*
+@package GennariGirino-Theme
+*/
+.girino-general-form,
+.girino-sidebar-preview { display: inline-blog; float: left; }
+
+.girino-sidebar-preview { width: 280px; background-color: #1F1F1F; padding: 20px; text-align: center; margin-right: 20px; }
+.girino-sidebar { display: block; text-align: center; }
+h1.girino-username,
+h2.girino-description { font-weight: 100; color: #fff; }
+h1.girino-username { font-size: 20px; margin: 0 0 10px; }
+h2.girino-description { font-size: 13px; margin: 0 0 20px; }
+
+.image-container { display: block; width: 100%; overflow: hidden; text-align: center; }
+.profile-picture { width: 122px; height: 122px; overflow: hidden; border-radius: 50%; margin: 20px auto; background-position: center center;
+background-repeat: no-repeat; background-size: cover;}

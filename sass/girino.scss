@@ -1,0 +1,385 @@
+/*
+IMPORTS
+--------
+*/
+
+@import 'base/variables'; //variables
+@import 'base/mixins'; //mixins
+@import 'base/wordpress'; //wordpress
+
+
+body { font-family: $body-font;
+
+
+        background-color: $light-grey;
+
+
+
+
+}
+
+a {  color: $primary-color; @include animate( color, 500ms );
+  &:hover,
+  &:focus{ text-decoration: none; color: $dark-grey; }
+
+}
+.background-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.table {  padding: 30px 0 30px 0;
+        .table-cell{  vertical-align: middle; }
+      }
+
+.header-container {
+  position: relative;
+  display: block;
+  //height: 326px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+.site-title {
+  color: #fff;
+  margin: 0;
+  font-size: 80px;
+}
+.site-description {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 1em;
+
+}
+.site-main{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.nav-container {  bottom: 0; left: 0; right: 0; }
+
+/*
+  HEADER
+  ========
+
+*/
+
+.container-fluid{
+
+  padding: 0;
+
+}
+
+
+@media (min-width: 768px) {
+    .header-scroll {
+        position: fixed;
+        z-index: 9;
+        width: 25%;
+        overflow-y: visible;
+      //  overflow-x: hidden;
+      //  overflow-y: hidden;
+        &:hover
+          {
+          //overflow-y: visible;
+        }
+
+
+        height: 100%;
+    }
+}
+
+
+/*
+  NAVBAR
+  ===============
+*/
+.navbar-girino { text-align: center; border: none; border-radius: 0; min-height: auto; margin-bottom: 0; background: rgba( 255, 255, 255, 0.1);
+border-top: 1px solid rgba( 255, 255, 255, 0.1);
+    ul{ float: none;}
+    li{ float: none; display: block;
+      a { text-transform: uppercase; color: #FFF !important; font-size: 20px; opacity: 0.7; letter-spacing: 0.05em; background: none; @include
+animate( opacity, 320ms  );
+          &:hover,
+          &:focus,
+          &:visited { background: none; opacity: 1;
+                //&:after{@include transform( translateY(0px));opacity: 1; }
+          }
+          &:after { content: ''; position: absolute; display: block; left: 15px; right: 15px; bottom: 14px; height: 2px; background: #fff;
+          @include animate(all, 500ms); opacity: 0; @include transform( translateY(10px)); }
+      }
+    }
+}
+
+/*
+  NAVBAR FOR XS
+  ================
+*/
+.navbar-blue{
+
+  //  background-color: #6495ed;
+    z-index: 99999;
+
+}
+.navbar-brand{
+
+
+    color: #fff !important;
+
+}
+.navbar-header{
+
+  button{
+
+      span{
+        color: $dark-grey !important;
+      }
+  }
+
+}
+
+.navbarxs-girino { text-align: center; border: none; border-radius: 0; min-height: auto; margin-bottom: 0; background: rgba( 255, 255, 255, 0.1);
+border-top: 1px solid rgba( 255, 255, 255, 0.1);
+    ul{ float: none;}
+    li{ float: none; display: block;
+      a { text-transform: uppercase; color: #FFF !important; font-size: 20px; opacity: 0.7; letter-spacing: 0.05em; background: none;
+
+
+          }
+
+          &:hover{
+
+
+              background-color: #fff;
+              a{
+                  color:  #6495ed !important;
+              }
+
+        }
+      }
+
+}
+
+/*
+  STANDARD POST
+  ===============
+*/
+
+article { margin-bottom: 80px; }
+
+h1{ font-size: 48px ; font-weight: 200;
+    &.entry-title { line-height: 1.5em; margin: 50px 0 0; padding: 0;
+      &:before, &:after { content: '~'; display: inline-block; position: relative;}
+      &:before { margin-right: 10px; }
+      &:after{ margin-left: 10px; }
+   }
+}
+.entry-meta {font-size: 13px; font-weight: 300; color: $light-grey;
+  a{ font-weight: 500; color: $light-grey;
+    &:hover,
+    &:focus{ color: $dark-grey; }
+    }
+}
+.standard-featured-link{ display: block; position: relative;
+  &:hover,
+  &:focus{
+      .standard-featured{
+        &:after { background-color: rgba(0,0,0,0); }
+      }
+  }
+}
+.standard-featured { height: 330px; display: block; position: relative;
+  &:after { @include animate( background-color, 1000ms ); content: ''; position: absolute; display: block; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.35);
+  }
+}
+.entry-excerpt { margin: 30px 0 16px;
+    p {  color: $dark-grey !IMPORTANT; font-size: 17px; line-height: 1.5em; font-weight: 300; letter-spacing: 0.02em;}
+}
+.btn-girino { @include animate (all, 300ms); text-transform: uppercase; font-size: 14px; font-weight: 300; color: $light-grey; padding: 8px 12px; border-radius: 0;
+border: 1px solid $light-grey; background-color: transparent;
+    &:hover,
+    &:focus { color: #fff; border-collapse: $dark-grey; background-color: $dark-grey}
+ }
+.entry-footer{ padding: 10px 5px; border-bottom: 2px solid $light-grey; color: $light-grey; text-transform: uppercase;
+  a{  color: $light-grey; display: inline-block; padding: 0 4px; font-size: 12px;}
+  .tags-list{
+    .dashicons-admin-links {  margin-right: 10px !important; }
+      a{ padding: 0 4px !important; }
+  }
+  .comments-link{
+      .dashicons-admin-comments{  margin-left: 10px !important; }
+  }
+}
+
+/*
+  VIDEO POST
+  =================
+
+*/
+
+/*
+  SINGLE POST
+  =================
+
+*/
+.entry-content-single{
+
+      margin-top: 40px;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      font-weight: 300px;
+      line-height: 1.7em;
+
+      p{
+          margin-bottom: 15px;
+
+      }
+      b,
+      strong{
+          font-weight: 500;
+
+      }
+
+}
+
+/* header profile */
+h1.girino-username,
+h2.girino-description { font-weight: 100; color: #fff; }
+h1.girino-username { font-size: 20px; margin: 0 0 10px; }
+h2.girino-description { font-size: 13px; margin: 0 0 20px; }
+
+.image-container { display: block; width: 100%; overflow: hidden; text-align: center; }
+.profile-picture { width: 122px; height: 122px; overflow: hidden; border-radius: 50%; margin: 20px auto; background-position: center center;
+background-repeat: no-repeat; background-size: cover;}
+
+/* Sidebar Section */
+.girino-sidebar{
+
+  color: #fff;
+  height: 100vh;
+  bottom: 0;
+
+  a {
+      color: #bababa;
+
+      &:hover,
+      &:focus{
+
+        color: #fff;
+      }
+
+  }
+}
+
+/* Widget Section */
+
+.girino-widget{
+
+      margin: 30px 0 50px;
+      padding: 0 20px;
+      ul{
+
+        text-align: left;
+        font-size: 20px;
+      }
+
+}
+
+h2.girino-widget-title {
+
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    background-color: #303030;
+    padding: 8px;
+    border-radius: 20px;
+    line-height: 1em;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+
+//Tags Cloud Widget
+.tagcloud {
+
+  text-align: center;
+  a{
+      display: inline-block;
+      background-color: #7d7d7d;
+      padding: 1px 9px;
+      border-radius: 10px;
+      color: #eee;
+      &:hover,
+      &:focus{
+
+        background-color: #DC143C;
+      }
+  }
+
+}
+// Categories Widget
+.cat-item {
+	position: relative;
+
+	a,
+	span {
+		display: block;
+		line-height: 1em;
+	}
+
+	a {
+		padding: 4px 0;
+	}
+
+	span {
+		position: absolute;
+		right: 0;
+		top: 2px;
+		font-size: 15px;
+		font-weight: 600;
+		padding: 2px 7px 5px;
+		background-color: #7D7D7D;
+		border-radius: 10px;
+
+	}
+
+}
+
+/* footer-index */
+
+
+/* escape-area*/
+
+
+/* comment-area*/
+.comments-area{
+  border-top: 4px solid #f1f1f1;
+  margin-top: 40px;
+
+}
+
+
+/*
+ *  STYLE 2 SCROLLBAR
+ */
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: $dark-grey;
+
+}
+	.mCSB_inside > .mCSB_container{ margin-right: 0px !important; }
