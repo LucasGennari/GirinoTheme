@@ -46,6 +46,7 @@ function girino_load_scripts(){
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true);
     wp_enqueue_script('manos', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', array('jquery'), '3.3.7', true);
     wp_enqueue_script( 'girino', get_template_directory_uri() . '/js/girino.js', array('jquery'), '1.0.0', true );
+
 }
 add_action('wp_enqueue_scripts', 'girino_load_scripts');
 ?>

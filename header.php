@@ -19,12 +19,15 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
 
       <title><?php bloginfo('name'); wp_title(); ?></title>
 
+
+
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
       <meta name="description" content=<?php bloginfo("description"); ?>>
       <meta charset="<?php bloginfo('charset'); ?>">
       <meta name="viewport" content = "width=device-widht, initial-scale=1 ">
       <link rel="Profile" href="http://gmpg.org/xfn/11"/>
+
       <?php if( is_singular() && pings_open( get_queried_object() ) ): ?>
         <link rel="pingback" href"<?php bloginfo('pingback_url'); ?>" >
       <?php endif; ?>
@@ -32,6 +35,7 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
   </head>
 
 <body <?php body_class(); ?>  data-mcs-theme="dark">
+
 
   <!-- NAV BAR FOR SMARTPHONES -->
   <div class="navbar navbar-default navbar-fixed-top visible-xs navbar-blue" role="navigation" style="background-image: url(<?php header_image();?>);" >
@@ -63,9 +67,9 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
   <div class="container-fluid" style="padding:0; "   >
 
     <div class="row" style="margin-right: 0; margin-left: 0; ">
-         <div class="hidden-xs col-sm-3 col-lg-3" style="padding:0px; ">
-           <div  class=" header-scroll">
-            <header class="background-image text-center" style="background-image: url(<?php header_image();?>);" >
+         <div class="hidden-xs col-sm-3 col-lg-3 scroll-header " style="padding:0px; background-image: url(<?php header_image();?>);">
+           <div id="secondary" class=" header-scroll background-image " >
+            <header class="text-center" >
 
                 <div class="header-content table">
                   <div class="table-cell">

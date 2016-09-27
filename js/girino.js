@@ -1,4 +1,4 @@
-jQuery(document).ready( function($){
+jQuery(function($){
 
   /* SCROLLBAR */
 /*  $('.header-scroll').hover(function(){
@@ -7,19 +7,17 @@ jQuery(document).ready( function($){
 
   });*/
   /* Scrollbar for IPAD */
-  $('.header-scroll').on("taphold",function(){
-  $( this ).css("overflow-y","visible");
-   });
+//  $('.header-scroll').on("taphold",function(){
+  //$( this ).css("overflow-y","visible");
+  // });
+
 
    /* custom scrollbar */
-   $(".header-scroll").mCustomScrollbar({
-  //  scrollbarPosition: "inside"
-   theme: "dark",
-   scrollbarPosition: "inside",
-   autoHideScrollbar: true
+  $(window).load(function(){
+  		$(".scroll-header").mCustomScrollbar({theme:"dark-thin",autoHideScrollbar:true,mouseWheelPixels:50000,advanced:{autoScrollOnFocus: false,updateOnContentResize: true,updateOnBrowserResize: true}});
+  	});
 
 
-  });
 
 
   /* AJAX FUNCTIONS */

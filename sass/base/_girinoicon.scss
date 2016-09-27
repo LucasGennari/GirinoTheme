@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'girino-icon';
+  src:
+    url('../fonts/girino-icon.ttf?wdzzzb') format('truetype'),
+    url('../fonts/girino-icon.woff?wdzzzb') format('woff'),
+    url('../fonts/girino-icon.svg?wdzzzb#girino-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.girino-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'girino-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.girino-arrows:before {
+  content: "\e900";
+}
+.girino-arrows-1:before {
+  content: "\e901";
+}
+.girino-aside .path1:before {
+  content: "\e902";
+  color: rgb(49, 192, 216);
+}
+.girino-aside .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 181, 72);
+}
+.girino-aside .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 210, 72);
+}
+.girino-aside .path4:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path5:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path6:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path7:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path8:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path9:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path10:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-aside .path11:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(35, 31, 32);
+}
+.girino-github:before {
+  content: "\e90d";
+}
+.girino-comments .path1:before {
+  content: "\e90e";
+  color: rgb(136, 192, 87);
+}
+.girino-comments .path2:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(101, 156, 53);
+}
+.girino-comments .path3:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-comments .path4:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-comments .path5:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-quote:before {
+  content: "\e913";
+}
+.girino-multimedia:before {
+  content: "\e914";
+}
+.girino-music:before {
+  content: "\e915";
+}
+.girino-tags .path1:before {
+  content: "\e916";
+  color: rgb(232, 213, 178);
+}
+.girino-tags .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(203, 178, 146);
+}
+.girino-tags .path3:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(215, 90, 74);
+}
+.girino-facebookblack:before {
+  content: "\e919";
+}
+.girino-facebook .path1:before {
+  content: "\e91a";
+  color: rgb(59, 89, 152);
+}
+.girino-facebook .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-googleplus .path1:before {
+  content: "\e91c";
+  color: rgb(220, 78, 65);
+}
+.girino-googleplus .path2:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(220, 78, 65);
+}
+.girino-googleplus .path3:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(220, 78, 65);
+}
+.girino-googleplus .path4:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-googleplus .path5:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.girino-googleblack:before {
+  content: "\e921";
+}
+.girino-twitterblack:before {
+  content: "\e922";
+}
+.girino-standard:before {
+  content: "\e923";
+}
+.girino-youtubeblack:before {
+  content: "\e924";
+}
+.girino-twitter .path1:before {
+  content: "\e925";
+  color: rgb(85, 172, 238);
+}
+.girino-twitter .path2:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.girino-video:before {
+  content: "\e927";
+}

@@ -65,7 +65,7 @@ $category->name ) . '">'. esc_html(  $category->name ) . '</a>';
       $i++;  endforeach;
   endif;
 
-  return '<span class="posted-on">Posted <a href="'.esc_url( get_permalink() ).'">' .$posted_on. '</a> ago</span> / <span
+  return '<span class="posted-on">Postado há <a href="'.esc_url( get_permalink() ).'">' .$posted_on. '</a> atrás</span> / <span
   class="posted-in">' . $output .'</span>';
 }
 
@@ -74,19 +74,19 @@ function girino_posted_footer() {
   $comments_num = get_comments_number();
   if( comments_open() ){
     if( $comments_num == 0 ){
-        $comments = __('No Comments');
+        $comments = __('Nenhum Comentário');
     } elseif ( $comments_num > 1){
-        $comments = $comments_num. __(' Comments');
+        $comments = $comments_num. __(' Comentários');
     } else{
-        $comments = __('1 Comment');
+        $comments = __('1 Comentário');
     }
-    $comments = '<a class = "comments-link" href="' . get_comments_link() . '">' . $comments . ' <span class="dashicons dashicons-admin-links"></span></a>';
+    $comments = '<a class = "comments-link" href="' . get_comments_link() . '">' . $comments . ' <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a>';
   }else{
     $comments = __('Comments are closed');
   }
 
   return '<div class="post-footer-container"> <div class="row"> <div class="col-xs-6 col-sm-6">'. get_the_tag_list('<div class="tag-
-  lists"><span class="glyphicon glyphicon-tags"></span>', ' ', '</div>') .'</div>
+  lists"><span class="girino-icon girino-tags"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>', ' ', '</div>') .'</div>
   <div class="col-xs-6 col-sm-6 text-right">'. $comments .'</div></div></div>';
 }
 

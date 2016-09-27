@@ -86,6 +86,9 @@ id="email" name="email" type="text" class="form-control email-field" value="' .e
 
         'class_submit' => 'btn btn-block btn-lg btn-warning',
         'label_submit' => __( 'Publicar Comentário' ),
+        'title_reply'  => __( 'Deixe uma resposta'),
+        'title_reply_to'  => __( 'Deixe uma resposta para %s'),
+        'cancel_reply_link' => __( '     Cancelar Resposta'),
         'comment_field' =>
             '<div class="form-group"><label for="comment">' . _x( 'Comente algo', 'noun') . '</label><textarea id="comment" class="form-control"
 name="comment" rows="4" required="required"></textarea></div>',
