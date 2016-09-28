@@ -135,5 +135,24 @@ function girino_get_post_navigation(){
 
     endif;
 }
+/*
+    SINGLE POST
+    =============
+*/
 
+function girino_post_navigation(){
+
+  $nav = '<div class="row">';
+
+  	$prev = get_previous_post_link( '<div class="post-link-nav"><span class="girino-icon girino-arrows-1" aria-hidden="true"></span> %link</div>', '%title' );
+  	$nav .= '<div class="col-xs-12 col-sm-6">' . $prev . '</div>';
+
+  	$next = get_next_post_link( '<div class="post-link-nav">%link <span class="girino-icon girino-arrows" aria-hidden="true"></span></div>', '%title' );
+  	$nav .= '<div class="col-xs-12 col-sm-6 text-right">' . $next . '</div>';
+
+  	$nav .= '</div>';
+
+  	return $nav;
+
+}
 ?>

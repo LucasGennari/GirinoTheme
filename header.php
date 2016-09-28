@@ -51,7 +51,7 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
       </div>
 
       <div class="navbar-collapse collapse">
-        <nav class="navbar navbar-default navbarxs-girino">
+        <nav class="navbar navbar-default navbar-girino">
           <?php
             wp_nav_menu( array(
               'theme_location' => 'primary',

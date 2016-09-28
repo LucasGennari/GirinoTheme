@@ -5,7 +5,7 @@
 */
  ?>
 
- <article id="post-<?php the_ID(); ?>" <?php post_class('girino-format-aside'); ?> style="margin-bottom:30px;">
+ <article id="post-<?php the_ID(); ?>" <?php post_class('girino-format-aside'); ?> style="margin-bottom:30px; margin-top:50px;">
 
 
     <div class="aside-container">
@@ -26,10 +26,18 @@
 
             <header class="entry-header">
 
+              
+                <div class="entry-meta">
 
+                  <div class="row">
 
-              <div class="entry-meta">
-                <?php echo girino_posted_meta(); ?>
+                    <div class="col-xs-6 col-sm-9 col-md-10">
+                   <?php echo girino_posted_meta(); ?>
+                 </div>
+                      <div class="col-xs-6 col-sm-3 col-md-2 text-right" style="padding-right: 25px;">
+                    <span  class="girino-icon girino-multimedia"></span>
+                  </div>
+                 </div>
               </div>
 
             </header>

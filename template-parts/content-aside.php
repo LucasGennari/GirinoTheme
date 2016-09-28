@@ -31,9 +31,17 @@
 
 
               <div class="entry-meta">
-                <?php echo girino_posted_meta(); ?>
-              </div>
 
+                <div class="row">
+
+                  <div class="col-xs-6 col-sm-9 col-md-10">
+                 <?php echo girino_posted_meta(); ?>
+               </div>
+                    <div class="col-xs-6 col-sm-3 col-md-2 text-right" style="padding-right: 25px;">
+                  <span  class="girino-icon girino-multimedia"></span>
+                </div>
+               </div>
+            </div>
             </header>
 
            <div class="entry-content">

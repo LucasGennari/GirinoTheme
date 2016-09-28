@@ -15,11 +15,11 @@
 
                               get_template_part( 'template-parts/single-aside', get_post_format() );
 
-                                the_post_navigation();
+                              echo girino_post_navigation();
                             }else{
                             get_template_part( 'template-parts/single', get_post_format() );
 
-                              the_post_navigation();
+                            echo girino_post_navigation();
                             }
                             if ( comments_open()):
                             comments_template();

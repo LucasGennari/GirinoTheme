@@ -18,6 +18,13 @@
 
                         endwhile;
 
+                        the_posts_pagination(
+                          array(
+                                'mid_size' => '2',
+                                'prev_text' => '<span class="girino-icon girino-arrows-1"></span>',
+                                'next_text' => '<span class="girino-icon girino-arrows"></span>'
+                          )
+                      );
                     endif;
 
                    ?>
