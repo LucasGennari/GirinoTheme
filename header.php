@@ -11,6 +11,12 @@ $lastName =  esc_attr( get_option( 'last_name' ) ) ;
 $fullName = $firstName . ' ' . $lastName;
 $description =  esc_attr( get_option( 'user_description' ) ) ;
 
+//SHARE SECTION
+
+$title = get_the_title();
+$permalink = get_permalink();
+$excerpt = get_the_excerpt();
+$featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
  ?>
 
 <!DOCTYPE html>
@@ -22,6 +28,14 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
 
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <!-- FACEBOOK APAGAR DEPOIS-->
+      <meta property="og:url"           content="<?php echo $permalink ?>" />
+      	<meta property="og:type"          content="Quase Cientista" />
+      	<meta property="og:title"         content="<?php echo $title ?>" />
+      	<meta property="og:description"   content="<?php echo $excerpt?>" />
+      	<meta property="og:image"         content="<?php echo $featured_image ?>" />
+
 
       <meta name="description" content=<?php bloginfo("description"); ?>>
       <meta charset="<?php bloginfo('charset'); ?>">
@@ -35,6 +49,16 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
   </head>
 
 <body <?php body_class(); ?>  data-mcs-theme="dark">
+
+  <!-- facebook test -->
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
   <!-- NAV BAR FOR SMARTPHONES -->

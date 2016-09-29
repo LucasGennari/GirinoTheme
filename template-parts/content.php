@@ -46,14 +46,19 @@
                 //IF YOU HAVE A TWITTER ADD THE TWITTER HANDLER TO THE $TWITTER
 
                 $twitter = 'https://twitter.com/intent/tweet?text=' . $title . '&amp;url=' . $permalink . $twitterHandler . '';
-                $facebook = 'https://facebook.com/sharer/sharer.php?url=' . $permalink;
+                $facebook = 'http://www.facebook.com/sharer.php?u='. $the_permalink .'&t=' . $the_title;
                 $google = 'https://plus.google.com/share?url=' . $permalink;
                ?>
 
+
+
+
+
                <ul>
                 <li><span class="girino-icon girino-multimedia"></span></li>
-                <li><a href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
-                <li><a href="<?php echo $facebook ?>" rel="nofollow"><span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></li>
+                <li><a  target="_blank" href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
+                  <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
+<span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
                 <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
                </ul>
 

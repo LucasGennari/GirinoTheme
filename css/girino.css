@@ -297,8 +297,7 @@ a img.aligncenter {
 
 body {
   font-family: "Raleway", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
-  background-color: #f3f3f3;
-  overflow-x: hidden; }
+  background-color: #f3f3f3; }
 
 a {
   color: #000000;
@@ -413,7 +412,7 @@ a {
   ===============
 */
 @media (max-width: 768px) {
-  #indexxs {
+  article {
     margin-top: 50px; } }
 article {
   margin-bottom: 60px;
@@ -431,7 +430,6 @@ article {
   font-size: 21px;
   top: -13px;
   left: 50%;
-  margin-left: -17px;
   padding-top: 2px; }
 
 @media (min-width: 768px) {
@@ -458,7 +456,7 @@ article {
     opacity: 0.75; }
     h1.entry-title {
       line-height: 1.5em;
-      margin: 60px 0 0;
+      margin: 5px 0 0;
       padding: 0; }
       h1.entry-title:before, h1.entry-title:after {
         display: inline-block;
@@ -642,8 +640,7 @@ article {
 /* header profile */
 h1.girino-username,
 h2.girino-description {
-  font-weight: 100;
-  color: #fff; }
+  font-weight: 100; }
 
 h1.girino-username {
   font-size: 20px;
@@ -674,10 +671,8 @@ h2.girino-description {
   color: #fff;
   height: 100vh;
   bottom: 0; }
-  .girino-sidebar a {
-    color: #bababa; }
-    .girino-sidebar a:hover, .girino-sidebar a:focus {
-      color: #fff; }
+  .girino-sidebar a:hover, .girino-sidebar a:focus {
+    color: red; }
 
 /* Widget Section */
 .girino-widget {
@@ -816,12 +811,12 @@ a.comment-reply-link {
 
 .recentcomments {
   font-size: 10px;
-  color: #ccc; }
+  color: black !important; }
   .recentcomments a {
     text-transform: uppercase; }
   .recentcomments span, .recentcomments span a {
     display: block;
-    color: #fff;
+    color: black;
     font-size: 14px;
     padding-bottom: 4px;
     margin-bottom: 2px;
@@ -865,11 +860,17 @@ a.comment-reply-link {
     padding: 0;
     list-style: none; }
   .girino-shareThisLoop li {
-    font-size: 30px;
-    margin: 0 5px;
     float: none;
     display: inline-block;
     list-style: none; }
+    @media (max-width: 768px) {
+      .girino-shareThisLoop li {
+        font-size: 25px;
+        margin: 0 0 0 0; } }
+    @media (min-width: 768px) {
+      .girino-shareThisLoop li {
+        font-size: 30px;
+        margin: 0 5px; } }
   .girino-shareThisLoop a {
     display: inline-block;
     font-size: 30px;
@@ -881,11 +882,16 @@ a.comment-reply-link {
 .btn-ul ul {
   list-style: none !important; }
 
-#leiamais {
-  float: right;
-  font-size: 25px;
-  margin-right: 10px; }
-
+@media (max-width: 768px) {
+  #leiamais {
+    float: right;
+    font-size: 120%;
+    margin-right: 10px; } }
+@media (min-width: 768px) {
+  #leiamais {
+    float: right;
+    font-size: 25px;
+    margin-right: 10px; } }
 /*
  *  STYLE 2 SCROLLBAR
  */
@@ -908,17 +914,24 @@ a.comment-reply-link {
 
 .main-footer {
   background-color: #5a5a5a;
-  height: 80px;
+  height: 100%;
   display: inline-block; }
+  @media (min-width: 768px) {
+    .main-footer {
+      height: 150%; } }
   .main-footer ul {
     padding-top: 10px;
+    padding-left: 0;
     display: inline-block; }
     .main-footer ul li {
       display: inline-block;
       font-size: 25px;
       color: #fff;
-      margin-left: 12px; }
+      margin-left: 15px; }
       .main-footer ul li h2 {
-        font-size: 15px; }
+        font-size: 13px; }
+
+.fb-share {
+  -webkit-filter: hue-rotate(120deg); }
 
 /*# sourceMappingURL=girino.css.map */
