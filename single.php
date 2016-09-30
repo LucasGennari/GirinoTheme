@@ -21,20 +21,20 @@
 
                             echo girino_post_navigation();
                             }
-                            if ( comments_open()):
-                            comments_template();
-                          endif;
+                          //  if ( comments_open()):
+                        //    comments_template();
+                      //    endif;
 
                           endwhile;
 
                       endif;
 
                      ?>
-
-
-            </div>
-
+                  <div class="text-center"    >
+                  <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
+                </div>
           </main>
+        </div>
 
 
 <?php get_footer(); ?>

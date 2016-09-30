@@ -56,7 +56,8 @@
                        <ul>
                         <li><span class="girino-icon girino-multimedia"></span></li>
                         <li><a href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
-                        <li><a href="<?php echo $facebook ?>" rel="nofollow"><span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></li>
+                        <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
+      <span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
                         <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
                        </ul>
 
@@ -81,5 +82,6 @@
   <footer class="entry-footer">
 
     <?php echo girino_posted_footer(); ?>
+
   </footer>
  </article>

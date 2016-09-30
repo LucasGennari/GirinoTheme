@@ -59,7 +59,8 @@
 
                            <ul>
                             <li><a target="_blank" href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
-                            <li><a href="<?php echo $facebook ?>" rel="nofollow"><span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></li>
+                            <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
+          <span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
                             <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
                            </ul>
                         </div>
@@ -88,7 +89,14 @@
   <footer class="entry-footer">
     <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
-        <?php echo girino_posted_footer(); ?>
+          <div class="post-footer-container">
+             <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                   <?php echo get_the_tag_list('<div class="tag-
+          lists"><span class="girino-icon girino-tags"><span class="path1"></span><span class="path2"></span>
+          <span class="path3"></span></span>', ' ', '</div>');?>
+        </div>
+          <div class="col-xs-6 col-sm-6 text-right"><a href="<?php echo $permalink ?>"><span class="fb-comments-count" data-href="<?php echo $permalink ?>"></span> comentários <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></div></div></div>
         </div>
     </div>
   </footer>

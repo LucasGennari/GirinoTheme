@@ -12,6 +12,7 @@
 $options = get_option('post_formats');
 $formats = array ('aside', 'galley', 'image', 'link','quote','status','video','audio','chat');
 $output = array();
+$permalink = get_permalink();
 
 foreach($formats as $format){
 
@@ -71,23 +72,23 @@ $category->name ) . '">'. esc_html(  $category->name ) . '</a>';
 
 function girino_posted_footer() {
 
-  $comments_num = get_comments_number();
-  if( comments_open() ){
-    if( $comments_num == 0 ){
-        $comments = __('Nenhum Comentário');
-    } elseif ( $comments_num > 1){
-        $comments = $comments_num. __(' Comentários');
-    } else{
-        $comments = __('1 Comentário');
-    }
-    $comments = '<a class = "comments-link" href="' . get_comments_link() . '">' . $comments . ' <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a>';
-  }else{
-    $comments = __('Comments are closed');
-  }
+//  $comments_num = get_comments_number();
+//  if( comments_open() ){
+//    if( $comments_num == 0 ){
+      //  $comments = __('Nenhum Comentário');
+//    } elseif ( $comments_num > 1){
+    //    $comments = $comments_num. __(' Comentários');
+//    } else{
+//        $comments = __('1 Comentário');
+//    $comments = '<a class = "comments-link" href="' . get_comments_link() . '">' . $comments . ' <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a>';
+//  }else{
+//    $comments = __('Comments are closed');
+//  }
+
 
   return '<div class="post-footer-container"> <div class="row"> <div class="col-xs-6 col-sm-6">'. get_the_tag_list('<div class="tag-
   lists"><span class="girino-icon girino-tags"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>', ' ', '</div>') .'</div>
-  <div class="col-xs-6 col-sm-6 text-right">'. $comments .'</div></div></div>';
+  <div class="col-xs-6 col-sm-6 text-right"><span class="fb-comments-count" data-href="'.$permalink.'"></span> comentários <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></div></div></div>';
 }
 
 function girino_get_embedded_media( $type = array()){

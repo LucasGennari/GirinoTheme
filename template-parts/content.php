@@ -41,6 +41,7 @@
               <?php
                 $title = get_the_title();
                 $permalink = get_permalink();
+                $comment =  get_comments_link();
 
                 $twitterHandler = ( get_option('twitter_handler') ? '&amp;via=' .esc_attr( get_option('twitter_handler')):'');
                 //IF YOU HAVE A TWITTER ADD THE TWITTER HANDLER TO THE $TWITTER
@@ -48,6 +49,7 @@
                 $twitter = 'https://twitter.com/intent/tweet?text=' . $title . '&amp;url=' . $permalink . $twitterHandler . '';
                 $facebook = 'http://www.facebook.com/sharer.php?u='. $the_permalink .'&t=' . $the_title;
                 $google = 'https://plus.google.com/share?url=' . $permalink;
+
                ?>
 
 
@@ -59,7 +61,7 @@
                 <li><a  target="_blank" href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
                   <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
 <span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
-                <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
+                <li><a href="<?php echo $comment ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
                </ul>
 
 
@@ -81,6 +83,15 @@
   </div><!-- .entry-content -->
 
   <footer class="entry-footer">
-    <?php echo girino_posted_footer(); ?>
+
+    <div class="post-footer-container">
+       <div class="row">
+          <div class="col-xs-6 col-sm-6">
+             <?php echo get_the_tag_list('<div class="tag-
+    lists"><span class="girino-icon girino-tags"><span class="path1"></span><span class="path2"></span>
+    <span class="path3"></span></span>', ' ', '</div>');?>
+  </div>
+    <div class="col-xs-6 col-sm-6 text-right"><a href="<?php echo $comment ?>"><span class="fb-comments-count" data-href="<?php echo $permalink ?>"></span> comentários <span class="girino-icon girino-comments"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></div></div></div>
+<!--    <span class="fb-comments-count" data-href=""></span> comentários -->
   </footer>
  </article>
