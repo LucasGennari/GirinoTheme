@@ -71,7 +71,7 @@ $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><?php bloginfo('name'); wp_title(); ?></a>
+          <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
       </div>
 
       <div class="navbar-collapse collapse">
