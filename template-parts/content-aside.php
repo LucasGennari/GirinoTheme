@@ -13,7 +13,7 @@
     <div class="aside-container">
        <div class="row" style="margin-left: 0">
 
-          <div class="col-xs-12 col-sm-3 col-md-2 text-center">
+          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
             <?php if( has_post_thumbnail()):
               $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
               ?>
@@ -24,7 +24,7 @@
 
           </div><!-- .col-md-3 -->
 
-          <div class="col-xs-12 col-sm-9 col-md-10 ">
+          <div class="col-xs-12 col-sm-9 col-md-9 ">
 
             <header class="entry-header">
 
@@ -39,32 +39,10 @@
                </div>
                     <div class="col-xs-6 col-sm-3 col-md-2 text-right" style="padding-right: 25px;">
 
-                        <button data-toggle="collapse" data-target="#collapse1">
+                        <a href="<?php the_permalink();?>" class="button">
                             <span  class="girino-icon girino-multimedia"></span>
-                        </button>
-                        <div class="collapse" id="collapse1" >
-                           <div class="girino-shareThis text-center" style="display: inline-block;">
-                          <?php
+                        </a>
 
-                            $title = get_the_title();
-                            $permalink = get_post_permalink();
-
-                            $twitterHandler = ( get_option('twitter_handler') ? '&amp;via=' .esc_attr( get_option('twitter_handler')):'');
-                            //IF YOU HAVE A TWITTER ADD THE TWITTER HANDLER TO THE $TWITTER
-
-                            $twitter = 'https://twitter.com/intent/tweet?text=' . $title . '&amp;url=' . $permalink . $twitterHandler . '';
-                            $facebook = 'https://facebook.com/sharer/sharer.php?url=' . $permalink;
-                            $google = 'https://plus.google.com/share?url=' . $permalink;
-                           ?>
-
-                           <ul>
-                            <li><a target="_blank" href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
-                            <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
-          <span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
-                            <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
-                           </ul>
-                        </div>
-                      </div>
 
                 </div>
                </div>

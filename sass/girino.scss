@@ -323,6 +323,35 @@ border: 1px solid $light-grey; background-color: transparent;
   background-color: #ffc04c;
 }
 /*
+  QUOTE POST
+  =================
+  */
+.icon-quote{
+  background-color: #a8a8a8;
+}
+@media (min-width: 768px){
+.girino-format-quote {
+	.quote-content { font-size: 42px !important; font-weight: 100; line-height: 1.3em; letter-spacing: 0.03em;
+		&:before,
+		&:after { content: ''; display: inline-block; position: relative; color: #ccc; }
+		&:before { content: '"'; }
+		&:after { content: '"'; }
+	}
+	.quote-author { color: #898989; font-size: 12px; letter-spacing: 0.06em; margin-top: 10px; margin-block-end: 30px; }
+}
+}
+@media (max-width: 768px){
+.girino-format-quote {
+	.quote-content { font-size: 30px !important; font-weight: 100; line-height: 1.3em; letter-spacing: 0.03em;
+		&:before,
+		&:after { content: ''; display: inline-block; position: relative; color: #ccc; }
+		&:before { content: '"'; }
+		&:after { content: '"'; }
+	}
+	.quote-author { color: #898989; font-size: 12px; letter-spacing: 0.06em; margin-top: 10px; margin-block-end: 30px; }
+}
+}
+/*
   GALLERY POST
   ==========
   */

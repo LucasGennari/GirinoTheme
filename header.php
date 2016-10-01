@@ -15,8 +15,22 @@ $description =  esc_attr( get_option( 'user_description' ) ) ;
 
 $title = get_the_title();
 $permalink = get_permalink();
+$type = "article";
 $excerpt = get_the_excerpt();
 $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
+$FacebookrHandler = ( get_option('facebook_handler') );
+
+if (is_front_page()){
+
+$title = get_bloginfo( 'name' );
+$excerpt = get_bloginfo('description');
+$featured_image = get_site_icon_url();
+$type = "website";
+$permalink = get_site_url();
+}else{
+
+
+}
  ?>
 
 <!DOCTYPE html>
@@ -30,14 +44,16 @@ $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
       <!-- FACEBOOK APAGAR DEPOIS-->
-      <meta property="og:url"           content="<?php echo $permalink ?>" />
-      	<meta property="og:type"          content="Quase Cientista" />
+        <meta property="og:locale"           content="pt_BR" />
+        <meta property="og:url"           content="<?php echo $permalink ?>" />
+      	<meta property="og:type"          content="<?php echo $type ?>" />
       	<meta property="og:title"         content="<?php echo $title ?>" />
       	<meta property="og:description"   content="<?php echo $excerpt?>" />
       	<meta property="og:image"         content="<?php echo $featured_image ?>" />
 
-
-      <meta name="description" content=<?php bloginfo("description"); ?>>
+        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+      <meta name="title" content="<?php  bloginfo("name"); ?>">
+      <meta name="description" content="<?php  bloginfo("description"); ?>">
       <meta charset="<?php bloginfo('charset'); ?>">
       <meta name="viewport" content = "width=device-widht, initial-scale=1 ">
       <link rel="Profile" href="http://gmpg.org/xfn/11"/>
@@ -62,7 +78,7 @@ $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
 
 
   <!-- NAV BAR FOR SMARTPHONES -->
-  <div class="navbar navbar-default navbar-fixed-top visible-xs navbar-blue" role="navigation" style="background-image: url(<?php header_image();?>);" >
+  <div class="navbar navbar-default navbar-fixed-top visible-xs navbar-blue" role="navigation" >
     <div class="container">
 
       <div class="navbar-header">
@@ -71,7 +87,7 @@ $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
+          <a class="navbar-brand" href="#"> <?php bloginfo('name'); ?></a>
       </div>
 
       <div class="navbar-collapse collapse">
@@ -91,14 +107,21 @@ $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
   <div class="container-fluid" style="padding:0; "   >
 
     <div class="row" style="margin-right: 0; margin-left: 0; ">
-         <div class="hidden-xs col-sm-3 col-lg-3 scroll-header " style="padding:0px; background-image: url(<?php header_image();?>);">
-           <div id="secondary" class=" header-scroll background-image " >
+         <div class="hidden-xs col-sm-3 col-lg-3 scroll-header " style="padding:0px;  ">
+           <div id="secondary" class=" header-scroll background-image " )>
             <header class="text-center" >
 
-                <div class="header-content table">
+                <div class="header-content table" style="padding-bottom: 10px; margin-bottom:5px; border-bottom:3px solid #f1f1f1; ">
                   <div class="table-cell">
-                    <h1 class="site-title"><?php bloginfo('name');?></h1>
-                    <h2 class="site-description"><?php bloginfo('description');?></h1>
+
+
+                      <a  class="site-title" style="font-family: Audiowide; font-size: 50px; color: #8d1010 !important; " target="_blank" href="<?php echo $FacebookrHandler  ?>" >
+                        <?php bloginfo('name'); ?></a>
+
+                    <h2 class="site-description">  <a  style="font-family: Audiowide; font-size: 13px;"
+                      target="_blank" href="<?php echo $FacebookrHandler  ?>" ><?php bloginfo('description');?></a></h2>
+
+                      <div class="fb-like" data-href="<?php echo $FacebookrHandler ?>" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
                   </div><!-- .table-cell -->
                 </div><!-- .header-content -->
 

@@ -4,6 +4,17 @@
 <div id="primary" class="content-area col-xs-12 col-sm-9 col-md-9 col-lg-8 col-lg-offset-3 col-sm-offset-3" style="background-color: #FFF;">
    <main id="main" class="site-main" role="main">
 
+    <!-- <div class="visible-xs header-content table" style=" padding-bottom: 10px; margin-bottom:5px;">
+       <div class="table-cell">
+
+       <div > <img src= "<?php //echo header_image();?>" height=100% width=100%> </div>
+
+
+           <div class="text-center">
+           <div class="fb-like" data-href="<?php //echo $FacebookrHandler ?>" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+         </div>
+       </div><!-- .table-cell -->
+    <!-- </div>--><!-- .header-content -->
             <div class="content-area">
 
                   <?php

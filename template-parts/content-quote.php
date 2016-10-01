@@ -5,35 +5,24 @@
 */
  ?>
 
- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+ <article id="post-<?php the_ID(); ?>" <?php post_class('girino-format-quote'); ?>>
 
-   <div class="icon-circle icon-standard">
-     <span class="girino-icon girino-standard"></span>
+   <div class="icon-circle icon-quote">
+     <span class="girino-icon girino-quote"></span>
    </div>
 
 
   <div class="entry-content">
-    <?php if( has_post_thumbnail()):
-      $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
-      ?>
-
-      <a class="standard-featured-link" href="<?php the_permalink();?>">
-        <div class="standard-featured background-image" style="background-image: url(<?php echo   $featured_image;  ?>);"></div>
-      </a>
-    <?php endif ?>
 
     <header class="entry-header text-center">
-
-      <?php the_title( '<h1 class="entry-title"><a href="'. esc_url(get_permalink()) .'" rel="bookmark">', '</a></h1>' ); ?>
-
-      <div class="entry-meta">
-        <?php echo girino_posted_meta(); ?>
+      <div class="row">
+            <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+           <h1 class="quote-content"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo get_the_content(); ?></a> </h1>
+            <?php the_title( '<h2 class="quote-author">', '</h2>' ); ?>
+          </div>
       </div>
-
     </header>
-    <div class="entry-excerpt">
-        <?php the_excerpt(); ?>
-    </div>
+
     <div class="row">
           <div class="col-sm-6">
             <div class="girino-shareThisLoop">
@@ -61,7 +50,7 @@
                 <li><a  target="_blank" href="<?php echo $twitter ?>" rel="nofollow"><span class="girino-icon girino-twitter"><span class="path1"></span><span class="path2"></span></span></a></li>
                   <li><div class="" data-href="<? echo $permalink ?>" ><a class="fb-xfbml-parse-ignore" target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink ?>">
 <span class="girino-icon girino-facebook"><span class="path1"></span><span class="path2"></span></span></a></div></li>
-                  <li><a href="<?php echo $google ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
+                <li><a href="<?php echo $comment ?>" rel="nofollow"><span class="girino-icon girino-googleplus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span></a></li>
                </ul>
 
 

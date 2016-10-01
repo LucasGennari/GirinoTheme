@@ -1,64 +1,30 @@
 <?php
 /*
-  ASIDE POST FORMAT
+  QUOTE POST FORMAT
   =====
 */
+
+$permalink = get_permalink();
+
+
  ?>
 
- <article id="post-<?php the_ID(); ?>" <?php post_class('girino-format-aside'); ?> style="margin-bottom:30px; margin-top:50px;">
+ <article id="post-<?php the_ID(); ?>" <?php post_class('girino-format-quote'); ?> style="margin-bottom:30px; margin-top:50px;">
 
 
-    <div class="aside-container">
+    <div class="quote-container">
       <div class="text-left" style=" padding-top: 8px;  border-top: 1px solid #f1f1f1; border-bottom:1px solid #f1f1f1;">
         <ul  style="list-style:none; display: -webkit-inline-box;">
             <li style="margin-right: 5px"><div class="fb-like" data-href="<?php echo $permalink ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></li>
             <li class="hidden-xs"><div class="fb-share-button" data-href="<?php echo $permalink ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a></div></li>
         </ul>
       </div>
-       <div class="row" style="margin-left: 0">
+       <div class="row text-center" >
 
-          <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-            <?php if( has_post_thumbnail()):
-              $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
-              ?>
-
-                <div class="aside-featured background-image" style="background-image: url(<?php echo   $featured_image;  ?>);"></div>
-
-            <?php endif ?>
-
-          </div><!-- .col-md-3 -->
-
-          <div class="col-xs-12 col-sm-9 col-md-9 ">
-
-            <header class="entry-header">
-
-
-                <div class="entry-meta">
-
-                  <div class="row">
-
-                    <div class="col-xs-6 col-sm-9 col-md-10">
-                   <?php echo girino_posted_meta(); ?>
-                 </div>
-                      <div class="col-xs-6 col-sm-3 col-md-2 text-right" style="padding-right: 25px;">
-                    <span  class="girino-icon girino-multimedia"></span>
-                  </div>
-                 </div>
-              </div>
-
-            </header>
-
-           <div class="entry-content">
-
-
-
-             <div class="entry-excerpt">
-                 <?php the_content(); ?>
-             </div>
-
-           </div><!-- .entry-content -->
-
-          </div><!-- .col-md-9 -->
+         <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+           <h1 class="quote-content"><?php echo get_the_content(); ?> </h1>
+         <?php the_title( '<h2 class="quote-author">', '</h2>' ); ?>
+       </div>
 
        </div><!--row-->
 

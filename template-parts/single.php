@@ -33,7 +33,7 @@
     <div class="text-left" style=" padding-top: 8px;  border-top: 1px solid #f1f1f1; border-bottom:1px solid #f1f1f1;">
       <ul  style="list-style:none; display: -webkit-inline-box;">
           <li style="margin-right: 5px"><div class="fb-like" data-href="<?php echo $permalink ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div></li>
-          <li><div class="fb-share-button" data-href="<?php echo $permalink ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a></div></li>
+          <li class="hidden-xs"><div class="fb-share-button" data-href="<?php echo $permalink ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a></div></li>
       </ul>
     </div>
   </header>

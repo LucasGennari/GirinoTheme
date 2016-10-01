@@ -11,16 +11,12 @@
 
                           while( have_posts() ): the_post();
 
-                            if('aside' == get_post_format()){
 
-                              get_template_part( 'template-parts/single-aside', get_post_format() );
 
-                              echo girino_post_navigation();
-                            }else{
                             get_template_part( 'template-parts/single', get_post_format() );
 
                             echo girino_post_navigation();
-                            }
+
                           //  if ( comments_open()):
                         //    comments_template();
                       //    endif;
@@ -30,7 +26,7 @@
                       endif;
 
                      ?>
-                  <div class="text-center"    >
+                  <div class="text-center">
                   <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5"></div>
                 </div>
           </main>
