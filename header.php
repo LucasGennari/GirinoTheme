@@ -19,6 +19,7 @@ $type = "article";
 $excerpt = get_the_excerpt();
 $featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ));
 $FacebookrHandler = ( get_option('facebook_handler') );
+$FacebookApp =  ( get_option('facebook_app') );
 
 if (is_front_page()){
 
@@ -43,8 +44,9 @@ $permalink = get_site_url();
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-      <!-- FACEBOOK APAGAR DEPOIS-->
-        <meta property="og:locale"           content="pt_BR" />
+      <!-- FACEBOOK GRAPH PROTOCOL-->
+        <meta property="fb:app_id"        content="<?php echo $FacebookApp ?>" />
+        <meta property="og:locale"        content="pt_BR" />
         <meta property="og:url"           content="<?php echo $permalink ?>" />
       	<meta property="og:type"          content="<?php echo $type ?>" />
       	<meta property="og:title"         content="<?php echo $title ?>" />

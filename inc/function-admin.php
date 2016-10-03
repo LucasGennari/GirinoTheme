@@ -34,6 +34,7 @@ function girino_custom_settings (){
     register_setting( 'girino-settings-group', 'user_description' );
     register_setting( 'girino-settings-group', 'twitter_handler' );
     register_setting( 'girino-settings-group', 'facebook_handler' );
+    register_setting( 'girino-settings-group', 'facebook_app' );
 
     add_settings_section( 'girino-sidebar-options' , 'Sidebar Option' , 'girino_sidebar_options' , 'lucas-gennarigirino');
 
@@ -42,6 +43,7 @@ function girino_custom_settings (){
     add_settings_field( 'sidebar-description', 'Description', 'girino_sidebar_description', 'lucas-gennarigirino', 'girino-sidebar-options');
     add_settings_field( 'sidebar-twitter', 'Twitter handler', 'girino_sidebar_twitter', 'lucas-gennarigirino', 'girino-sidebar-options');
     add_settings_field( 'sidebar-facebook', 'Facebook handler', 'girino_sidebar_facebook', 'lucas-gennarigirino', 'girino-sidebar-options');
+      add_settings_field( 'sidebar-facebook-app', 'Facebook app', 'girino_sidebar_facebook_app', 'lucas-gennarigirino', 'girino-sidebar-options');
 
     //Theme Support Options
     register_setting( 'girino-theme-support', 'post_formats' );
@@ -122,6 +124,11 @@ function girino_sidebar_facebook (){
 
 }
 
+function girino_sidebar_facebook_app (){
+  $facebookapp =  esc_attr( get_option( 'facebook_app' ) ) ;
+  echo '<input type="text" name="facebook_app" value="'.$facebookapp.'" placeholder="Facebook app"/>';
+
+}
 //Template submenu functions
 function girino_theme_support_page(){
 
